@@ -61,6 +61,7 @@ textarea {
 }
 #topNav {
   display: flex;
+  
   max-width: 1200px;
   width: 100%;
   padding: 14px 30px 15px 25px;
@@ -68,11 +69,14 @@ textarea {
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  z-index: 2;
+  position: fixed;
+  z-index: 100;
+  top: 14px;
+
 }
 #mobileNav {
   display: none;
-  z-index: 7;
+  z-index: 100;
 }
 .burger-menu {
   width: 30px;
@@ -132,10 +136,11 @@ textarea {
     display: none;
   }
   #mobileNav {
-    position: relative;
-    margin: 0 10px;
+    position: fixed;
+    top: 14px;
+    right: 10px;
+    left: 10px;
     display: flex;
-    width: 100%;
     max-width: 1200px;
     padding: 14px 30px 15px 25px;
     gap: 25px;
@@ -154,6 +159,9 @@ textarea {
   font-size: 16px;
   font-weight: 500;
   line-height: 19.5px;
+}
+#navList li:hover{
+  color: #0bb2eb;
 }
 .blueBtn {
   display: flex;
@@ -252,25 +260,11 @@ textarea {
 #hexagonCont {
   position: absolute;
   width: 773.9px;
-  height: 966.5px;
-  top: -90.74px;
-  left: -08.72px;
-  gap: 0px;
-  opacity: 0.05px;
-  transform: rotate(-19.36deg);
-  opacity: 0.06;
-  z-index: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-#hexagonImages {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-#lowerHex {
-  position: absolute;
-  top: 270px;
-  right: -25px;
-}
+
 #patners {
   position: relative;
   display: flex;
@@ -866,8 +860,10 @@ footer {
     }
 }
 #aboutUsLanding,
-#agentresourcesLanding {
+#agentresourcesLanding,
+#ffl-differenceLanding {
   position: relative;
+  padding-top: 100px;
   height: 355px;
   z-index: 3;
   background: linear-gradient(
@@ -887,6 +883,12 @@ footer {
     ),
     url(./images/whiteFamilyLanding.png);
   background-position: right center;
+}
+#ffl-differenceLanding{
+  background: linear-gradient(270.4deg, rgba(224, 239, 255, 0) 27.88%, #E0EFFF 66.88%),
+    url(./images/fflDifferenceLanding.png);
+  background-position: right center;
+  overflow: hidden;
 }
 #aboutHeroContent {
   padding-top: 10px;
@@ -1374,7 +1376,10 @@ footer {
 #downloads,
 #carriers,
 #youtube,
-#steps {
+#steps,
+#eliteOuter,
+#unlock,
+#instruments {
   display: flex;
   justify-content: space-around;
   padding: 70px 10px;
@@ -1390,11 +1395,25 @@ footer {
   background: #e0efff;
   overflow: hidden;
 }
+#unlock{
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%) top,
+            linear-gradient(to bottom, #015FC9 50%, #015FC9 100%) bottom;
+background-size: 100% 50%;
+background-repeat: no-repeat;
+}
+#instruments{
+  background:linear-gradient(to bottom, hsla(214, 37%, 96%, 0.95) 0%, hsla(214, 37%, 96%, 0.95) 100%), url(./images/handShakeBg.jpg);
+  background-size: cover;
+  
+}
 #quickLinksContent,
 #downloadsContent,
 #carriersContent,
 #youtubeContent,
-#stepsContent {
+#stepsContent,
+#eliteContent,
+#unlockContent,
+#instrumentsContent {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -1405,7 +1424,9 @@ footer {
 #downloadsContent h1,
 #carriersContent h1,
 #youtube h1,
-#stepsContent h1 {
+#stepsContent h1,
+#eliteText h1,
+#instrumentsContent h1 {
   font-family: Montserrat;
   font-size: 40px;
   font-weight: 600;
@@ -1413,6 +1434,9 @@ footer {
   text-align: left;
   color: #16243d;
   z-index: 4;
+}
+#instrumentsContent h1{
+  text-align: center;
 }
 #youtube h1 {
   color: #ffffff;
@@ -1560,7 +1584,7 @@ footer {
   background: #ffffff;
   z-index: 2;
 }
-.step p {
+.step p, #eliteDesc {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
@@ -1673,4 +1697,125 @@ footer {
     bottom: 0;
     left: 300px;
     z-index: 1;
+}
+#elite{
+  background: url(./images/whiteWomanWith\ coupleInBack.png);
+  background-repeat: no-repeat;
+}
+#eliteOuter{
+  
+  background: url(./images/joinEliteHexBackground.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#eliteContent{
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#eliteText{
+  padding: 20px 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  width: 100%;
+  max-width: 587px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 25px 0px #0000000D;
+}
+#eliteText button{
+  width: fit-content;
+}
+
+#unlockContent{
+  flex-direction: row;
+  gap: 25px;
+}
+#unlockContent img{
+  box-shadow: 0px 4px 25px 0px #0000001A;
+width: 100%;
+}
+#leftUnlock,#rightUnlock{
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+.unlockText{
+  border-radius: 4px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+.unlockText h1{
+  font-family: Montserrat;
+font-size: 40px;
+font-weight: 600;
+line-height: 48.76px;
+text-align: left;
+
+}
+.unlockText p{
+  font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+line-height: 28px;
+text-align: left;
+
+}
+#leftUnlockText h1, #leftUnlockText p{
+  color: #FFFFFF;
+}
+@media (max-width:900px) {
+  #unlockContent{
+    flex-direction: column-reverse;
+  }
+  #rightUnlock{
+    flex-direction: column-reverse;
+  }
+
+}
+#instrumentsGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.instrumentItem{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 30px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  align-items: start;
+}
+.instrumentItem h3{
+  font-family: Montserrat;
+font-size: 24px;
+font-weight: 600;
+line-height: 29.26px;
+text-align: left;
+color: #16243d;
+}
+.instrumentItem p{
+  font-family: Montserrat;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: #82868c;
+}
+@media (max-width:1200px) {
+  .instrumentImg{
+    display: none;
+  }
+  #instrumentsGrid{
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (max-width:900px){
+  #instrumentsGrid{
+    flex-wrap: wrap;
+  }
 }
