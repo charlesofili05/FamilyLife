@@ -196,6 +196,7 @@ textarea {
 }
 
 #heroContent {
+  overflow: hidden;
   max-width: 448px;
   display: flex;
   flex-direction: column;
@@ -279,6 +280,7 @@ textarea {
  
 }
 #patnersContent {
+  overflow: hidden;
   max-width: 1200px;
   display: flex;
   gap: 40px;
@@ -309,6 +311,7 @@ textarea {
   z-index: 3;
 }
 #trustContent {
+  overflow: hidden;
     width: 100%;
   height: 666px;
   max-width: 1200px;
@@ -325,6 +328,7 @@ textarea {
   grid-row: 2/3;
 }
 #trustText {
+  overflow: hidden;
     padding: 0 10px;
   grid-column: 4/7;
   grid-row: 1/2;
@@ -347,6 +351,7 @@ textarea {
   margin-top: 20px;
 }
 #trustCardContainer {
+  overflow: hidden;
     width: 100%;
   grid-column: 6/7;
   grid-row: 2/3;
@@ -526,6 +531,7 @@ textarea {
   align-items: center;
 }
 #sayingTitle {
+  overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
@@ -552,6 +558,7 @@ textarea {
 }
 
 #sayingCardContainer {
+  overflow: hidden;
   max-width: 1102px;
   display: flex;
   gap: 26px;
@@ -923,6 +930,7 @@ footer {
   position: relative;
 }
 #aboutNumbersContent {
+  overflow: hidden;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -1006,6 +1014,7 @@ footer {
   color: #16243d;
 }
 #teamMemberContainer {
+  overflow: hidden;
   display: flex;
   gap: 15px;
   justify-content: space-between;
@@ -1485,6 +1494,7 @@ background-repeat: no-repeat;
   text-decoration: underline;
 }
 .carrierContainer {
+  overflow: hidden;
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
@@ -1741,6 +1751,7 @@ background-repeat: no-repeat;
 width: 100%;
 }
 #leftUnlock,#rightUnlock{
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 68px;
@@ -1781,6 +1792,7 @@ text-align: left;
 
 }
 #instrumentsGrid{
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -1822,4 +1834,72 @@ color: #82868c;
   #instrumentsGrid{
     flex-wrap: wrap;
   }
+}
+
+
+/* Animation styles */
+
+#heroContent h1{
+  scale: 0.2;
+  transition: all 0.75s ease-in;
+}
+#heroContent h1.animate{
+  scale: 1;
+}
+#heroContentDesc{
+  transform: translateX(-300px);
+  transition: all 0.75s ease-in;
+}
+#heroContentDesc.animate{
+  transform: translateX(0);
+}
+#heroBtns{
+  transform: translateY(100px);
+  transition: all 0.75s ease-in;
+}
+#heroBtns.animate{
+  transform: translateY(0);
+}
+
+#patnersContent img{
+  transform: translateY(100px);
+  transition: all 0.75s ease-in;
+}
+#patnersContent img.animate{
+  transform: translateY(0);
+}
+.slideFromRight{
+  transform: translateX(300px);
+  transition: all 0.75s ease-in;
+}
+.slideFromRight.animate{
+  transform: translateX(0);
+}
+.slideFromLeft{
+  transform: translateX(-300px);
+  transition: all 0.75s ease-in;
+}
+.slideFromLeft.animate{
+  transform: translateX(0);
+}
+.slideFromBottom{
+  transform: translateY(100px);
+  transition: all 0.75s ease-in;
+}
+.slideFromBottom.animate{
+  transform: translateY(0);
+}
+.slideFromUp{
+  transform: translateY(-100px);
+  transition: all 0.75s ease-in;
+}
+.slideFromUp.animate{
+  transform: translateY(0);
+}
+.scale{
+  scale: 0.2;
+  transition: all 0.75s ease-in;
+}
+.scale.animate{
+  scale: 1;
 }
