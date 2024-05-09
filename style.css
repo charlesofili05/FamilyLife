@@ -149,6 +149,9 @@ textarea {
     background: #fff;
   }
 }
+.logo{
+  height: 54px;
+}
 #navList {
   display: flex;
   align-items: center;
@@ -1130,6 +1133,7 @@ footer {
   display: flex;
   padding: 70px 17px;
   gap: 59px;
+  justify-content: center;
 }
 @media (max-width:1200px) {
     #promiseImg{
