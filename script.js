@@ -116,11 +116,13 @@ let numberCount = () => {
           if (startValue >= endValue) {
             clearInterval(counter);
           }
-        }, duration);counted = true;
+        }, duration);
+        counted = true;
       }
     });
     
   }
   
 };
+window.addEventListener("load", numberCount);
 window.addEventListener("scroll", numberCount);
