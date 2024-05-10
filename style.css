@@ -1923,7 +1923,7 @@ color: #82868c;
 }
 .spin{
   transform: perspective(700px) rotateY(-90deg);
-  transition: all 1.2s ease-in-out;
+  transition: all 1.4s ease-in-out;
 }
 .spin.animate{
   transform: perspective(700px) rotateY(0);
