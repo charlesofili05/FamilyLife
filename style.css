@@ -1841,65 +1841,90 @@ color: #82868c;
 
 #heroContent h1{
   scale: 0.2;
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 #heroContent h1.animate{
   scale: 1;
+  opacity: 1;
 }
 #heroContentDesc{
   transform: translateX(-300px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 #heroContentDesc.animate{
   transform: translateX(0);
+  opacity: 1;
 }
 #heroBtns{
   transform: translateY(100px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 #heroBtns.animate{
   transform: translateY(0);
+  opacity: 1;
 }
 
-#patnersContent img{
+/* #patnersContent img{
   transform: translateY(100px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 #patnersContent img.animate{
   transform: translateY(0);
-}
+  opacity: 1;
+} */
 .slideFromRight{
   transform: translateX(300px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 .slideFromRight.animate{
   transform: translateX(0);
+  opacity: 1;
 }
 .slideFromLeft{
   transform: translateX(-300px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 .slideFromLeft.animate{
   transform: translateX(0);
+  opacity: 1;
 }
 .slideFromBottom{
   transform: translateY(100px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 .slideFromBottom.animate{
   transform: translateY(0);
+  opacity: 1;
 }
 .slideFromUp{
   transform: translateY(-100px);
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 .slideFromUp.animate{
   transform: translateY(0);
+  opacity: 1;
 }
 .scale{
   scale: 0.2;
-  transition: all 0.75s ease-in;
+  opacity: 0;
+  transition: all 1.2s ease-out;
 }
 .scale.animate{
   scale: 1;
+  opacity: 1;
+}
+.spin{
+  transform: perspective(700px) rotateY(-90deg);
+  transition: all 1.2s ease-in-out;
+}
+.spin.animate{
+  transform: perspective(700px) rotateY(0);
 }
