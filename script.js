@@ -91,19 +91,26 @@ const handleAnimation = () => {
 window.addEventListener("load", handleAnimation);
 window.addEventListener("scroll", handleAnimation);
 
-let counted = false;
 
-let numberCount = () => {
-  if (counted == false) {
-    valueDisplays.forEach((valueDisplay) => {
-      if (isInViewport(valueDisplay)) {
+let checkDisplay = ()=>{valueDisplays.forEach((valueDisplay) => {
+    if (isInViewport(valueDisplay)) {
+        let numCountDone = valueDisplay.getAttribute("counted")
+        if(numCountDone == "false"){
+            console.log("counted");
+          numberCount(valueDisplay)
+          valueDisplay.setAttribute("counted", "true")
+        }
+        
+}
+});}
+let numberCount = (valueDisplay) => {
         let startValue = 0;
         let endValue = parseInt(valueDisplay.getAttribute("data-value"));
         
         let duration = Math.floor(interval / endValue);
 
         let counter = setInterval(() => {
-            if(endValue >1000){
+            if(endValue > 1000){
                 startValue += 500
             }else if(endValue == 1000){
                 startValue += 5
@@ -113,16 +120,14 @@ let numberCount = () => {
             }
           
           valueDisplay.textContent = startValue;
-          if (startValue >= endValue) {
+          if (startValue == endValue) {
             clearInterval(counter);
           }
         }, duration);
-        counted = true;
-      }
-    });
+     
     
-  }
+  
   
 };
-window.addEventListener("load", numberCount);
-window.addEventListener("scroll", numberCount);
+window.addEventListener("load", checkDisplay);
+window.addEventListener("scroll", checkDisplay);
