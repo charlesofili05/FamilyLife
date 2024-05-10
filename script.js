@@ -46,9 +46,6 @@ let valueDisplays = document.querySelectorAll(".numCount");
 let interval = 1000;
 
 const handleAnimation = () => {
-  if (isInViewport(document.querySelector("#heroContent h1"))) {
-    document.querySelector("#heroContent h1").classList.add("animate");
-  }
   if (isInViewport(document.querySelector("#heroContentDesc"))) {
     document.querySelector("#heroContentDesc").classList.add("animate");
   }
@@ -102,11 +99,21 @@ let numberCount = () => {
       if (isInViewport(valueDisplay)) {
         let startValue = 0;
         let endValue = parseInt(valueDisplay.getAttribute("data-value"));
+        
         let duration = Math.floor(interval / endValue);
+
         let counter = setInterval(() => {
-          startValue += 1;
+            if(endValue >1000){
+                startValue += 500
+            }else if(endValue == 1000){
+                startValue += 5
+            }
+            else{
+               startValue += 1; 
+            }
+          
           valueDisplay.textContent = startValue;
-          if (startValue == endValue) {
+          if (startValue >= endValue) {
             clearInterval(counter);
           }
         }, duration);counted = true;

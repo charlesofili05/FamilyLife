@@ -1839,15 +1839,7 @@ color: #82868c;
 
 /* Animation styles */
 
-#heroContent h1{
-  scale: 0.2;
-  opacity: 0;
-  transition: all 1.2s ease-out;
-}
-#heroContent h1.animate{
-  scale: 1;
-  opacity: 1;
-}
+
 #heroContentDesc{
   transform: translateX(-300px);
   opacity: 0;
