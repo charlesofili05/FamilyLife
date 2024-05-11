@@ -56,22 +56,22 @@ textarea {
 #topNavContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
-  padding: 26px 0px;
+  padding: 12px 0px;
+  position: fixed;
+  z-index: 100;
+  top: 14px;
 }
 #topNav {
   display: flex;
-  
   max-width: 1200px;
   width: 100%;
   padding: 14px 30px 15px 25px;
   gap: 25px;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  position: fixed;
-  z-index: 100;
-  top: 14px;
+  background: #FFFFFF;
 
 }
 #mobileNav {
@@ -188,13 +188,19 @@ textarea {
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 1200px;
 }
 #hero {
     width: 100%;
   max-width: 1200px;
   display: flex;
 }
-
+#landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #heroContent {
   overflow: hidden;
   max-width: 448px;
@@ -1019,6 +1025,7 @@ footer {
   gap: 15px;
   justify-content: space-between;
   flex-wrap: wrap;
+  z-index: 10;
 }
 
 #teamMemberContainer h3 {
