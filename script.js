@@ -4,8 +4,8 @@ document.getElementById("burger-menu").addEventListener("click", function () {
   document.getElementById("mobileTopNav").classList.toggle("fixednav");
   document.body.classList.toggle("no-scroll");
 });
-if(document.querySelector("#contactusMainForm")){
-   document.querySelector("#contactusMainForm").submit((e)=>{
+if(document.querySelector("#contactUsMainForm")){
+   document.querySelector("#contactUsMainForm").submit((e)=>{
     e.preventDefault();
 
     document.querySelector('button[type="submit"]').text("Sending Message...")
