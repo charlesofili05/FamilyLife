@@ -890,6 +890,8 @@ footer {
     url(./images/asian-family-on-couch.png);
   background-position: right center;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 #agentresourcesLanding {
   background: linear-gradient(
